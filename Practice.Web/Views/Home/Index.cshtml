@@ -1,0 +1,20 @@
+﻿@model Practice.Models.Task.TaskResponseModal
+@{ 
+    var taskModel = Model.TaskModel;
+    var taskList = Model.AllTask;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Important task</h1>
+    @Html.Partial("_addTask",taskModel)
+    <hr />
+    @Html.Partial("_taskList", taskList)
+
+</body>
+</html>
